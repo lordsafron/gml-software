@@ -1,0 +1,14 @@
+<h1>{{ character.name | uppercase }}</h1>
+
+<mat-card class="example-card">
+    <mat-card-header>
+        <h4>{{ character.name }}</h4>
+    </mat-card-header>
+    <img mat-card-image src="{{character.thumbnail?.path}}.{{character.thumbnail?.extension}}" [alt]="character.name">
+    <mat-card-content>
+        <p> {{ character | json }} </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <a mat-raised-button color="primary" [routerLink]="['/characters']">Regresar</a>
+    </mat-card-actions>
+</mat-card>

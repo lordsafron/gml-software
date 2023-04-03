@@ -1,0 +1,6 @@
+<hr>
+<ul>
+    <li>
+        <app-character-card (characterSeleccionado)="verCharacter( $event )" [character]="char" *ngFor="let char of characters"></app-character-card>
+    </li>
+</ul>

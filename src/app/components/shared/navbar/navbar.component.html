@@ -1,0 +1,25 @@
+<nav>
+    <div class="panel">
+        <img src="assets/img/logo.png" width="150" height="50" alt="" class="center">
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <form class="form-inline my-2 my-lg-0">
+            <table class="example-full-width" cellspacing="0" class="center">
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Search Character</mat-label>
+                            <input matInput (keyup.enter)="buscarCharacter(buscarTexto.value)" #buscarTexto>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button mat-raised-button color="primary" (click)="buscarCharacter(buscarTexto.value)">Buscar</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</nav>

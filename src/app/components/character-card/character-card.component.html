@@ -1,0 +1,18 @@
+<mat-card class="example-card">
+    <mat-card-header>
+        <h4>{{ character.name }}</h4>
+    </mat-card-header>
+    <img mat-card-image src="{{character.thumbnail?.path}}.{{character.thumbnail?.extension}}" [alt]="character.name">
+    <mat-card-content>
+        <div *ngIf="character.description; else elseBlock">
+            <p> {{ character.description }} </p>
+        </div>
+        <ng-template #elseBlock>Content not available.</ng-template>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="verCharacter()">
+        Ver más...
+      </button>
+    </mat-card-actions>
+</mat-card>
+<br>
